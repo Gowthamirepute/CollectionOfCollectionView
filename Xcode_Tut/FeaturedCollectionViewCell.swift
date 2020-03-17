@@ -43,8 +43,6 @@ class FeaturedCollectionViewCell: UICollectionViewCell,UICollectionViewDelegate,
       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
           let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "Cells", for: indexPath) as! CategoryCollectionViewCell
         
-        
-        
         cell.currentAppData=currentapp?.app?[indexPath.row]
           return cell
       }
@@ -78,9 +76,6 @@ class CategoryCollectionViewCell: UICollectionViewCell {
                 secondLabel.text=others
                 thirdLabel.text=String(prices)
             }
-            else{
-                print("Failed seems")
-            }
         }
     }
     
@@ -100,13 +95,11 @@ class CategoryCollectionViewCell: UICollectionViewCell {
      
      
      func setupViews(){
-ImageView.contentMode = .scaleAspectFill
+         ImageView.contentMode = .scaleAspectFill
         ImageView.layer.cornerRadius=10
         ImageView.layer.masksToBounds=true
         secondLabel.text="Entertainment"
         thirdLabel.text="$3.99"
-        //ImageView.image=UIImage(imageLiteralResourceName: "")
-         print("Default calling")
      }
 }
 
